@@ -7,4 +7,6 @@
 
 import Foundation
 
-
+protocol ServiceProxyProtocol {
+    func getItem<T: Decodable>(url: URL, type: T.Type, completion: @escaping (Result<T, APIError>) -> Void)
+}
